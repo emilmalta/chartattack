@@ -39,6 +39,7 @@ phones %>%
        x = "Landline subscriptions\n(per 100 people)",
        y = "Cell phone subscriptions\n(per 100 people)"
   ) +
+  labs(title = "{frame_time}") + 
   transition_time(year) +
   shadow_wake(.05)
 
