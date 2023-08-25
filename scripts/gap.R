@@ -2,7 +2,7 @@
 
 library(tidyverse)
 library(countrycode)
-library(shadowtext)library(ggrepel)
+library(shadowtext)
 library(WDI)
 
 # Import ddata -----------------------------------------------------------------
@@ -18,6 +18,8 @@ gap <- gap_raw %>%
   mutate(continent = countrycode(iso3c, "iso3c", "continent")) %>% 
   suppressWarnings() %>% 
   drop_na(continent)
+
+# Visualise --------------------------------------------------------------------
 
 gap %>% 
   filter(year <= 2019) %>% 
